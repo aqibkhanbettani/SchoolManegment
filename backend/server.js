@@ -26,7 +26,12 @@ db.connect((err) => {
   console.log("✅ Connected to MySQL Database");
 });
 
-
+app.get('/', (req, res) => {
+  res.send({
+    activitystatus: true,
+    error: false,
+  })
+})
 // ============================
 // 📌 API Route: Admission Form
 // ============================
